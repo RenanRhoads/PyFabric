@@ -46,16 +46,3 @@ class FabricClient:
             'Authorization': f'Bearer {self.access_token}',
             'Content-Type': 'application/json'
         }
-
-# Usage
-client = FabricClient(
-    client_id="your-id",
-    client_secret="your-secret",
-    tenant_id="your-tenant"
-)
-
-# Headers are generated automatically when needed
-response = requests.get(
-    'https://api.powerbi.com/v1.0/myorg/groups',
-    headers=client.headers
-)
